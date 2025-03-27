@@ -1,0 +1,200 @@
+
+    /* Header */
+    #header {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    } 
+   body{
+       background-color: wheat;
+   }
+
+    /* Goal input section */
+    #goalInputDiv {
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+        position: relative; /* This is to allow absolute positioning of the text inside */
+        max-width: 100%;
+    }
+
+    /* Start button section */
+    #startBtnDiv {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    /* Callout section */
+    #calloutDiv {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    #calloutP {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* How it works section */
+    #howItWorksDiv {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    #howItWorksP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    #howItWorksPP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* You and friends name section */
+    #youAndFriendsName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+        max-width: 100%;
+    }
+
+    /* You and friends phone section */
+    #youAndFriendsPhone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+        max-width: 100%;
+    }
+
+    /* Money Where Mouth Is section */
+    #moneyWhereMouthIs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+        max-width: 100%;
+    }
+
+    /* Challenge button section */
+    #challenge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+        max-width: 100%;
+    }
+
+    /* Button Styles */
+    #startBtn {
+        background-color: hsl(120, 73%, 75%);
+        color: black;
+        border-radius: 15px;
+        width: 237px;
+        padding: 0, 20px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px;
+        max-width: 100%;
+    }
+
+    #challengeBtn {
+        background-color: hsl(120, 73%, 75%);
+        color: black;
+        border-radius: 15px;
+        width: 237px;
+        padding: 0, 20px;
+        height: 50px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px;
+        max-width: 100%;
+    }
+
+    /* Input fields and select dropdown */
+    #goal, #inputGoal,
+    #date, #inputName,
+    #friendName, #inputPhoneYou,
+    #inputPhoneFriend, #inputGoalDate,
+    #payDropdown {
+        flex: 1;
+        color: black;
+        background: hsl(120, 73%, 75%);
+        height: 50px;
+        padding: 0 20px;
+        outline: 0;
+        border: 0;
+        border-radius: 15px;
+        text-align: center; /* Center text */
+        font-size: .9rem; /* Set placeholder font size */
+        max-width: 100%;
+    }
+
+    /* Centering placeholder text */
+    ::placeholder {
+        text-align: center;
+        font-size: 1rem; /* Set placeholder font size to 1rem */
+        max-width: 100%;
+    }
+
+    /* Center the selected option in the dropdown */
+    #payDropdown {
+        text-align: center; /* Center the selected option */
+        max-width: 100%;
+    }
+
+    /* Centering text in dropdown options */
+    #payDropdown option {
+        text-align: center; /* Centers the options in the dropdown */
+        max-width: 100%;
+    } 
+
+    @media (min-width: 640px){
+        .style1 {
+            
+        }
+    }
+
+    @media (min-width: 768px){
+        .style2{
+            
+        }
+    }
+
+    @media (min-width: 1024px){
+        .style3{
+            
+        }
+    }
