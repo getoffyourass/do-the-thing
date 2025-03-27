@@ -1,23 +1,24 @@
-// Firebase configuration
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyC0EPtQE-tA4sW0gaX4aoXk1D-RxaW4ZIM",
+  authDomain: "getoffyourass.firebaseapp.com",
+  projectId: "getoffyourass",
+  storageBucket: "getoffyourass.firebasestorage.app",
+  messagingSenderId: "1044292710186",
+  appId: "1:1044292710186:web:a9a5d671d03b06a1cab853",
+  measurementId: "G-J55T93MPCK"
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-// Get Firestore database
-const db = firebase.firestore();
-
-
-
-// Form validation before submitting
-document.getElementById("challengeBtn").addEventListener("click", function(event) {
+// Handle form submission
+document.getElementById("challengeBtn").addEventListener("click", async function(event) {
     event.preventDefault(); // Prevent form submission
 
     // Get input values
@@ -28,10 +29,28 @@ document.getElementById("challengeBtn").addEventListener("click", function(event
     const friendName = document.getElementById("friendName").value.trim();
     const inputPhoneYou = document.getElementById("inputPhoneYou").value.trim();
     const inputPhoneFriend = document.getElementById("inputPhoneFriend").value.trim();
+    const payAmount = document.getElementById("payDropdown").value;
 
     // Validate form
     if (goalInput || (inputGoal && inputGoalDate && inputName && friendName && inputPhoneYou && inputPhoneFriend)) {
-        window.location.href = "https://getoffyourass.github.io/do-the-thing-checkout/?";
+        // Add goal data to Firestore
+        try {
+            await addDoc(collection(db, "goals"), {
+                goal: goalInput || inputGoal,
+                goalDate: inputGoalDate,
+                name: inputName,
+                friendName: friendName,
+                phoneYou: inputPhoneYou,
+                phoneFriend: inputPhoneFriend,
+                amount: payAmount
+            });
+
+            alert("Goal submitted successfully!");
+            window.location.href = "https://getoffyourass.github.io/do-the-thing-checkout/?"; // Redirect after successful submission
+        } catch (error) {
+            console.error("Error adding document: ", error);
+            alert("Failed to submit goal. Please try again.");
+        }
     } else {
         alert("Please either enter a goal or fill out the rest of the form.");
     }
