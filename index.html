@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get off your ass!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+</head>
+<body>
+    <div id="header">
+        <h1 id="titleBlock">Get Off Your Ass!</h1>
+    </div>
+
+    <!-- Goal Input Section -->
+    <div id="goalInputDiv">
+        <input type="text" id="goal" placeholder="What's your goal?" value="">
+    </div>
+
+    <div id="startBtnDiv">
+        <button id="startBtn">💪 Get off your Ass</button>
+    </div>
+
+    <div id="calloutDiv">
+        <h2>Accountability.</h2>
+    </div>
+
+    <div id="calloutP">
+        <p>Can't keep from the sites no matter how hard you try? Do you keep putting off that thing you say you are going to do? Put your money where your mouth is!</p> 
+    </div>
+
+    <div id="howItWorksDiv">
+        <h2>How it works:</h2>
+    </div>
+
+    <div id="howItWorksP">
+        <p>You set a goal, maybe you want to start that new business, maybe you have been skipping the gym, or maybe you want to <strong>stop choking the chicken.</strong> We tend to be more likely to do the things we say we are going to do if we have an accountability partner as well as a negative consequence for not doing that thing.</p>
+    </div>
+
+    <div id="howItWorksPP">
+        <p>Enter your goal, deadline, and wager. Schedule a payment for your deadline. Your friend will check in, and if you fail, your card is charged, and we keep the money. Succeed, and you keep it. A fraction of the proceeds will be donated to help further addiction/mental health research and awareness.</p>
+    </div>
+
+    <div id="moneyWhereMouthIs">
+        <input type="text" id="inputGoal" placeholder="Enter a goal">
+        <span>by</span>
+        <input type="date" id="inputGoalDate">
+        <span>or pay</span>
+        <select id="payDropdown">
+            <option>$5</option>
+            <option>$10</option>
+            <option>$25</option>
+            <option>$50</option>
+            <option>$100</option>
+            <option>$500</option>
+            <option>$1000</option>
+            <option>$5000</option>
+            <option>$10000</option>
+        </select>
+    </div>
+
+    <div id="youAndFriendsName">
+        <input type="text" id="inputName" placeholder="Your name">
+        <input type="text" id="friendName" placeholder="Your friend's name">
+    </div>
+
+    <div id="youAndFriendsPhone">
+        <input type="tel" id="inputPhoneYou" placeholder="Your phone #">
+        <input type="tel" id="inputPhoneFriend" placeholder="Your friend's phone #">
+    </div>
+
+    <div id="challenge">
+        <button id="challengeBtn">🧗Challenge!</button>
+    </div>
+</body>
+</body>
+</html>
